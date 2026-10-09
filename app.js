@@ -142,8 +142,8 @@ async function connectToDeriv() {
         // Legacy WebSocket API endpoint.
         // The token must have read access for this connection test.
         derivSocket = new WebSocket(
-            "wss://ws.derivws.com/websockets/v3?app_id=1089"
-        );
+    `wss://ws.derivws.com/websockets/v3?app_id=${34D2hxr9Xo2babiK8miih}`
+);
 
         derivSocket.onmessage = handleMessage;
 
