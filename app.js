@@ -223,12 +223,17 @@ async function connectToDeriv() {
             }
         };
 
-        derivSocket.onerror = () => {
-            setMessage(
-                "connectionMessage",
-                "Connection error. Check your internet and API token."
-            );
+        derivSocket.onerror = (event) => {
+    console.error("Deriv WebSocket error:", event);
 
+    setMessage(
+        "connectionMessage",
+        "WebSocket connection failed. Check the App ID, " +
+        "internet connection, and browser console."
+    );
+
+    setConnectionStatus("Connection Error");
+};
             setConnectionStatus("Connection Error");
         };
 
