@@ -6,7 +6,7 @@
 "use strict";
 
 const $ = (id) => document.getElementById(id);
-
+const DERIV_APP_ID = "34D2hxr9Xo2babiK8miih";
 let derivSocket = null;
 let requestCounter = 1;
 let connected = false;
